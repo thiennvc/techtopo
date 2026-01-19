@@ -10,10 +10,10 @@ import { GoogleGenAI } from "@google/genai";
 export const getTechAssistantResponse = async (query: string) => {
   // Always use the named parameter for apiKey and obtain it directly from process.env.API_KEY
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-  
+
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3-flash-preview',
+      model: 'gemini-1.5-flash',
       contents: `Bạn là một chuyên gia kỹ thuật cao cấp. Hãy giải đáp thắc mắc sau đây về công nghệ hoặc hướng dẫn thực hiện bài Lab một cách ngắn gọn, súc tích và chính xác.
       Câu hỏi: ${query}`,
       config: {

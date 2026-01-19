@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
+import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import LabGrid from './components/LabGrid';
 import ArticleSection from './components/ArticleSection';
@@ -25,7 +25,7 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen">
       <TopographyBackground />
-      <Navbar />
+      <Navigation />
 
       <main className="relative">
         <Hero />
